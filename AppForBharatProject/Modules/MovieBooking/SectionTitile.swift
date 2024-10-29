@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SectionTitle: View {
-    let title = "Section Title"
+    let title : String
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
@@ -25,6 +25,6 @@ struct SectionTitle: View {
 struct SectionTitle_Previews: PreviewProvider {
     static var previews: some View {
         // Initialize MovieBooking with a presenter instance
-        SectionTitle()
+        SectionTitle(title: "Section Title")
     }
 }

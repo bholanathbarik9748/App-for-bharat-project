@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct MovieBooking: View {
-    @ObservedObject var presenter: MovieBookingPresenter;
-    
+    @ObservedObject var presenter: MovieBookingPresenter
+
     var body: some View {
-        VStack(alignment: .leading){
-            SectionTitle()
+        VStack(alignment: .leading) {
+            SectionTitle(title: "Section Title")
             Carousel(imageUrls: presenter.carouselImages)
             MovieDetail()
             Timer(days: 0, hours: 0, minutes: 0, seconds: 0)
+            UserBookingStats(
+                users: presenter.horizontalItems,
+                userCount: presenter.horizontalItems.count)
+            CustomTab()
             Spacer()
         }
     }
