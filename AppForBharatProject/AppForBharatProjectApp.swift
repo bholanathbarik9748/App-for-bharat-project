@@ -11,7 +11,8 @@ import SwiftUI
 struct AppForBharatProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let presenter = MovieBookingPresenter()
+            MovieBooking(presenter: presenter)
         }
     }
 }
